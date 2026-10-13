@@ -16,5 +16,5 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://archivosocultos.com/sitemap.xml
-# AI Index: https://archivosocultos.com/llms.txt
+Sitemap: [https://archivosocultos.com/sitemap.xml](https://archivosocultos.com/sitemap.xml)
+# AI Index: [https://archivosocultos.com/llms.txt](https://archivosocultos.com/llms.txt)
