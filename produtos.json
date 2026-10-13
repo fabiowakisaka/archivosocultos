@@ -2,31 +2,31 @@
   {
     "titulo": "Sapiens: De animales a dioses (Edición en Español)",
     "descricao": "La fascinante historia oculta de cómo nuestra especie logró dominar el planeta.",
-    "imagem_url": "https://m.media-amazon.com/images/I/713jIoMO3UL._SL1500_.jpg",
-    "link_afiliado": "https://www.amazon.com/dp/8499926222?tag=aquaponiabr05-20"
-  },
-  {
-    "titulo": "Globo Terráqueo Antiguo de Escritorio",
-    "descricao": "Diseño clásico estilo vintage para decoración de estudios, bibliotecas y oficinas.",
-    "imagem_url": "https://m.media-amazon.com/images/I/81h9iF23-vL._AC_SL1500_.jpg",
-    "link_afiliado": "https://www.amazon.com/dp/B07N8Z78X3?tag=aquaponiabr05-20"
-  },
-  {
-    "titulo": "Caja de Rompecabezas Secreta Da Vinci (Cryptex)",
-    "descricao": "Un cilindro con código oculto inspirado en el Renacimiento para guardar secretos.",
-    "imagem_url": "https://m.media-amazon.com/images/I/71k7F7-c2ML._AC_SL1500_.jpg",
-    "link_afiliado": "https://www.amazon.com/dp/B07CZ51D3R?tag=aquaponiabr05-20"
-  },
-  {
-    "titulo": "Reloj de Arena Magnético de Escritorio",
-    "descricao": "Fascinante fenómeno físico donde el hierro forma estructuras hipnóticas al caer.",
-    "imagem_url": "https://m.media-amazon.com/images/I/61y2v-R7tAL._AC_SL1200_.jpg",
-    "link_afiliado": "https://www.amazon.com/dp/B01C5O7N4I?tag=aquaponiabr05-20"
+    "imagem_url": "https://placehold.co/200x260/1c1917/f59e0b.png?text=SAPIENS%0AHARARI&font=playfair-display",
+    "link_afiliado": "https://www.amazon.com/dp/8499924212?tag=aquaponiabr05-20"
   },
   {
     "titulo": "Las 48 Leyes del Poder (Edición en Español)",
-    "descricao": "Análisis histórico de las estrategias, intrigas y secretos de los grandes líderes.",
-    "imagem_url": "https://m.media-amazon.com/images/I/71aG+xDKSYL._SL1500_.jpg",
-    "link_afiliado": "https://www.amazon.com/dp/0140280197?tag=aquaponiabr05-20"
+    "descricao": "Tres mil años de historia del poder, intrigas de corte y estrategias de grandes líderes.",
+    "imagem_url": "https://placehold.co/200x260/1c1917/f59e0b.png?text=48+LEYES%0ADEL+PODER&font=playfair-display",
+    "link_afiliado": "https://www.amazon.com/dp/6075276912?tag=aquaponiabr05-20"
+  },
+  {
+    "titulo": "Homo Deus: Breve historia del mañana (Español)",
+    "descricao": "Descubre los secretos del futuro de la humanidad a partir de nuestros misterios pasados.",
+    "imagem_url": "https://placehold.co/200x260/1c1917/f59e0b.png?text=HOMO%0ADEUS&font=playfair-display",
+    "link_afiliado": "https://www.amazon.com/dp/8499926711?tag=aquaponiabr05-20"
+  },
+  {
+    "titulo": "Criptex Da Vinci: Caja de Secreto con Código",
+    "descricao": "Cilindro mecánico con contraseña oculta inspirado en los manuscritos del Renacimiento.",
+    "imagem_url": "https://placehold.co/200x260/1c1917/f59e0b.png?text=CRIPTEX%0ADA+VINCI&font=playfair-display",
+    "link_afiliado": "https://www.amazon.com/s?k=da+vinci+code+cryptex&tag=aquaponiabr05-20"
+  },
+  {
+    "titulo": "Globo Terráqueo Antiguo de Escritorio",
+    "descricao": "Mapa clásico estilo expedición antigua para decoración de bibliotecas y estudios.",
+    "imagem_url": "https://placehold.co/200x260/1c1917/f59e0b.png?text=GLOBO%0AANTIGUO&font=playfair-display",
+    "link_afiliado": "https://www.amazon.com/s?k=vintage+desktop+world+globe&tag=aquaponiabr05-20"
   }
 ]
