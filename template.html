@@ -81,10 +81,10 @@
 
   <!-- Barra de Topo Minimalista -->
   <div class="w-full max-w-xl flex items-center justify-between px-2 py-2 text-xs font-mono-dossier text-stone-500">
-    <span class="flex items-center gap-1.5">
+    <a href="https://archivosocultos.com" class="flex items-center gap-1.5 hover:text-stone-300 transition-colors">
       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
       EXPEDIENTE VERIFICADO
-    </span>
+    </a>
     <span>LECTURA: ~1 MIN</span>
   </div>
 
@@ -193,6 +193,18 @@
         </div>
       </a>
     </section>
+
+    <!-- Gaveta Minimalista de Outros Expedientes (Retenção de Curiosos) -->
+    <nav class="px-6 sm:px-8 py-5 border-t border-stone-800/80 bg-stone-950/40">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-[11px] font-mono-dossier font-bold text-stone-500 uppercase tracking-widest">
+          📂 Otros Expedientes Desclasificados
+        </span>
+      </div>
+      <div class="space-y-2">
+        {{OUTROS_ARQUIVOS_HTML}}
+      </div>
+    </nav>
 
     <!-- Rodapé -->
     <footer class="py-4 bg-stone-950 text-center text-[11px] font-mono-dossier text-stone-600 border-t border-stone-900 px-4">
