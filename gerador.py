@@ -3,18 +3,18 @@ import json
 import random
 import urllib.parse
 from datetime import datetime
-import google.generativeai as genai
+from google import genai
 
-# 1. Configuração da API Gemini
+# 1. Configuração da Nova SDK Oficial do Gemini (google-genai)
 API_KEY = os.environ.get("GEMINI_API_KEY")
 if not API_KEY:
     raise ValueError("ERRO CRÍTICO: A chave GEMINI_API_KEY não foi encontrada nos Secrets do GitHub.")
 
-genai.configure(api_key=API_KEY)
+client = genai.Client(api_key=API_KEY)
 
 hoje_dt = datetime.now()
 data_hoje_iso = hoje_dt.strftime("%Y-%m-%d")
-data_curta = hoje_dt.strftime("%m%d-%H%M") # Inclui hora/minuto no código do doc para diferenciar execuções
+data_curta = hoje_dt.strftime("%m%d-%H%M")
 
 # 2. Carrega o Catálogo de IA existente para evitar histórias repetidas
 catalogo_path = "catalogo_ia.json"
@@ -33,7 +33,7 @@ lista_proibidos = ", ".join(titulos_existentes) if titulos_existentes else "Ning
 # 3. Matriz de Caos Histórico (Sorteio livre a cada execução)
 SIGLOS = [
     "Siglo XVI", "Siglo XVII", "Siglo XVIII", "Siglo XIX", 
-    "Principios del Siglo XX", "Edad Media", "Antigüedad Clásica", " Guerra Fría (Siglo XX)"
+    "Principios del Siglo XX", "Edad Media", "Antigüedad Clásica", "Guerra Fría (Siglo XX)"
 ]
 REGIONES = [
     "Europa Occidental", "Asia Oriental", "América Latina", 
@@ -49,14 +49,13 @@ TEMAS = [
     "Una expedición perdida o un descubrimiento arqueológico accidental"
 ]
 
-# Sem seed fixo por dia: cada clique manual gera uma combinação inédita!
 siglo_hoy = random.choice(SIGLOS)
 region_hoy = random.choice(REGIONES)
 tema_hoy = random.choice(TEMAS)
 
 print(f"Sorteio da vez -> Época: {siglo_hoy} | Região: {region_hoy} | Tema: {tema_hoy}")
 
-# 4. Chamada à IA (Gemini) com proteção de versão de modelo
+# 4. Prompt de Engenharia de Curiosidade
 prompt = f"""
 Eres un investigador cazador de curiosidades oscuras y reales de la historia mundial.
 Tu misión es contar una historia verdadera, documentada, rápida y alucinante.
@@ -88,12 +87,26 @@ Retorna EXCLUSIVAMENTE un JSON puro y válido (sin bloques markdown ```json):
 }}
 """
 
+# 5. Chamada à IA com gemini-3.8-flash + Auto-Descoberta de modelos ativos
+modelos_candidatos = ["gemini-3.8-flash", "gemini-3.0-flash", "gemini-2.5-pro"]
+
+try:
+    for m in client.models.list():
+        nome_m = m.name.replace("models/", "")
+        if "gemini" in nome_m and ("flash" in nome_m or "pro" in nome_m) and "vision" not in nome_m and "embedding" not in nome_m:
+            if nome_m not in modelos_candidatos:
+                modelos_candidatos.append(nome_m)
+except Exception as e:
+    print(f"Aviso ao listar modelos dinamicamente: {e}")
+
 conteudo = None
-for nome_modelo in ["gemini-2.5-flash", "gemini-1.5-flash", "gemini-pro"]:
+for nome_modelo in modelos_candidatos:
     try:
         print(f"Tentando gerar conteúdo com o modelo: {nome_modelo}...")
-        model = genai.GenerativeModel(nome_modelo)
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(
+            model=nome_modelo,
+            contents=prompt,
+        )
         raw_text = response.text.strip()
         if "```" in raw_text:
             raw_text = raw_text.split("```")[1]
@@ -124,7 +137,7 @@ slug = conteudo["slug"]
 caminho_pasta = f"artigos/{slug}"
 url_canonica = f"[https://archivosocultos.com/artigos/](https://archivosocultos.com/artigos/){slug}/"
 
-# 5. Formatação Visual dos Parágrafos
+# 6. Formatação Visual dos Parágrafos
 paragrafos_formatados = []
 for idx, p in enumerate(conteudo["paragrafos"]):
     if idx == 0:
@@ -135,7 +148,7 @@ for idx, p in enumerate(conteudo["paragrafos"]):
 reflexao_html = "".join(paragrafos_formatados)
 titulo_url = urllib.parse.quote(conteudo["titulo"].upper())
 
-# 6. Carrega a Vitrine de Afiliados (Rotaciona a cada artigo gerado)
+# 7. Carrega a Vitrine de Afiliados
 try:
     with open("produtos.json", "r", encoding="utf-8") as f:
         produtos_afiliados = json.load(f)
@@ -148,7 +161,7 @@ except Exception:
         "link_afiliado": "[https://www.amazon.com/dp/8499924212?tag=aquaponiabr05-20](https://www.amazon.com/dp/8499924212?tag=aquaponiabr05-20)"
     }
 
-# 7. Monta o HTML Final
+# 8. Monta o HTML Final
 with open("template.html", "r", encoding="utf-8") as f:
     template = f.read()
 
@@ -177,7 +190,7 @@ with open(f"{caminho_pasta}/index.html", "w", encoding="utf-8") as f:
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_subpagina)
 
-# 8. Atualiza Sitemap.xml
+# 9. Atualiza Sitemap.xml
 sitemap_path = "sitemap.xml"
 url_nova = f"  <url>\n    <loc>{url_canonica}</loc>\n    <lastmod>{data_hoje_iso}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n"
 
@@ -193,7 +206,7 @@ else:
 with open(sitemap_path, "w", encoding="utf-8") as f:
     f.write(sitemap_final)
 
-# 9. Atualiza Catálogo de IA (catalogo_ia.json) e llms.txt
+# 10. Atualiza Catálogo de IA (catalogo_ia.json) e llms.txt
 novo_item_ia = {
     "slug": slug,
     "title": conteudo["titulo"],
@@ -248,7 +261,7 @@ llms_txt_content = (
 with open("llms.txt", "w", encoding="utf-8") as f:
     f.write(llms_txt_content)
 
-# 10. Gera robots.txt
+# 11. Gera robots.txt
 robots_content = """User-agent: *
 Allow: /
 
@@ -273,7 +286,7 @@ Sitemap: [https://archivosocultos.com/sitemap.xml](https://archivosocultos.com/s
 with open("robots.txt", "w", encoding="utf-8") as f:
     f.write(robots_content)
 
-# 11. Gera o arquivo de disparo inicial para WhatsApp
+# 12. Gera o arquivo de disparo inicial para WhatsApp
 msg_zap = f"""🕵️‍♂️ *{conteudo['titulo']}*
 
 {conteudo['chamada_zap']}
