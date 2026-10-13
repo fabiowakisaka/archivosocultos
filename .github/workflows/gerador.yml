@@ -1,0 +1,37 @@
+name: Gerador Diario de Arquivos Ocultos
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Roda todo dia às 06:00 UTC
+  workflow_dispatch: # Permite rodar manualmente pelo painel do GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  gerar-conteudo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copiar Repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Instalar Dependencias
+        run: pip install google-generativeai
+
+      - name: Executar Gerador Python
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python gerador.py
+
+      - name: Salvar Alteracoes no GitHub Pages
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Automacao: Novo archivo oculto gerado em $(date +'%Y-%m-%d')"
+          git push
