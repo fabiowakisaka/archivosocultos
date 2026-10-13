@@ -16,7 +16,7 @@ hoje_dt = datetime.now()
 data_hoje_iso = hoje_dt.strftime("%Y-%m-%d")
 data_curta = hoje_dt.strftime("%m%d-%H%M")
 
-# 2. Carrega o Catálogo de IA existente para evitar histórias repetidas
+# 2. Carrega o Catálogo de IA existente para evitar histórias repetidas e alimentar o menu inferior
 catalogo_path = "catalogo_ia.json"
 if os.path.exists(catalogo_path):
     try:
@@ -161,7 +161,26 @@ except Exception:
         "link_afiliado": "[https://www.amazon.com/dp/8499924212?tag=aquaponiabr05-20](https://www.amazon.com/dp/8499924212?tag=aquaponiabr05-20)"
     }
 
-# 8. Monta o HTML Final
+# 8. Monta a Gaveta Minimalista dos últimos 3 expedientes para reter visitantes curiosos
+outros_itens = [item for item in catalogo if item.get("slug") != slug][:3]
+
+if outros_itens:
+    linhas_outros = []
+    for item in outros_itens:
+        linhas_outros.append(
+            f'<a href="{item["url"]}" class="flex items-center justify-between gap-3 py-2.5 px-3 rounded-lg bg-stone-900/60 hover:bg-stone-800/80 border border-stone-800/60 hover:border-amber-500/40 transition-all group">'
+            f'<div class="flex items-center gap-2.5 min-w-0">'
+            f'<span class="text-[10px] font-mono-dossier text-amber-500/90 bg-amber-950/50 border border-amber-800/30 px-1.5 py-0.5 rounded flex-shrink-0">{item["historical_era"]}</span>'
+            f'<span class="text-xs sm:text-sm text-stone-300 group-hover:text-white font-medium truncate">{item["title"]}</span>'
+            f'</div>'
+            f'<span class="text-xs text-stone-500 group-hover:text-amber-400 group-hover:translate-x-0.5 transition-all flex-shrink-0">&rarr;</span>'
+            f'</a>'
+        )
+    outros_html = "".join(linhas_outros)
+else:
+    outros_html = '<p class="text-xs text-stone-600 font-mono-dossier italic">Nuevos expedientes siendo desclasificados diariamente...</p>'
+
+# 9. Monta o HTML Final
 with open("template.html", "r", encoding="utf-8") as f:
     template = f.read()
 
@@ -181,7 +200,8 @@ html_subpagina = template \
     .replace("{{PRODUTO_DESC}}", produto_hoje["descricao"]) \
     .replace("{{PRODUTO_IMAGEM}}", produto_hoje["imagem_url"]) \
     .replace("{{PRODUTO_LINK}}", produto_hoje["link_afiliado"]) \
-    .replace("{{CANONICAL_URL}}", url_canonica)
+    .replace("{{CANONICAL_URL}}", url_canonica) \
+    .replace("{{OUTROS_ARQUIVOS_HTML}}", outros_html)
 
 os.makedirs(caminho_pasta, exist_ok=True)
 with open(f"{caminho_pasta}/index.html", "w", encoding="utf-8") as f:
@@ -190,7 +210,7 @@ with open(f"{caminho_pasta}/index.html", "w", encoding="utf-8") as f:
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_subpagina)
 
-# 9. Atualiza Sitemap.xml
+# 10. Atualiza Sitemap.xml
 sitemap_path = "sitemap.xml"
 url_nova = f"  <url>\n    <loc>{url_canonica}</loc>\n    <lastmod>{data_hoje_iso}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n"
 
@@ -206,7 +226,7 @@ else:
 with open(sitemap_path, "w", encoding="utf-8") as f:
     f.write(sitemap_final)
 
-# 10. Atualiza Catálogo de IA (catalogo_ia.json) e llms.txt
+# 11. Atualiza Catálogo de IA (catalogo_ia.json) e llms.txt
 novo_item_ia = {
     "slug": slug,
     "title": conteudo["titulo"],
@@ -261,7 +281,7 @@ llms_txt_content = (
 with open("llms.txt", "w", encoding="utf-8") as f:
     f.write(llms_txt_content)
 
-# 11. Gera robots.txt
+# 12. Gera robots.txt
 robots_content = """User-agent: *
 Allow: /
 
@@ -286,7 +306,7 @@ Sitemap: [https://archivosocultos.com/sitemap.xml](https://archivosocultos.com/s
 with open("robots.txt", "w", encoding="utf-8") as f:
     f.write(robots_content)
 
-# 12. Gera o arquivo de disparo inicial para WhatsApp
+# 13. Gera o arquivo de disparo inicial para WhatsApp
 msg_zap = f"""🕵️‍♂️ *{conteudo['titulo']}*
 
 {conteudo['chamada_zap']}
