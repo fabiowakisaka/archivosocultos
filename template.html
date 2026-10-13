@@ -6,6 +6,9 @@
   <title>{{TITULO}} | Archivos Ocultos</title>
   <link rel="canonical" href="{{CANONICAL_URL}}">
   
+  <!-- Referência direta para Agentes de IA (LLMs / RAG) -->
+  <link rel="alternate" type="text/plain" href="https://archivosocultos.com/llms.txt" title="LLM Context & JSON Index">
+
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTX7KYYZSD"></script>
   <script>
@@ -21,10 +24,35 @@
   <meta property="og:description" content="{{CHAMADA_ZAP}}">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{{CANONICAL_URL}}">
-  <!-- Gera a imagem pequenina do WhatsApp dinamicamente com fundo escuro e texto dourado -->
   <meta property="og:image" content="https://placehold.co/600x315/0c0a09/f59e0b.png?text=ARCHIVO+OCULTO%0A{{TITULO_URL}}&font=playfair-display">
   <meta property="og:image:width" content="600">
   <meta property="og:image:height" content="315">
+
+  <!-- Schema.org JSON-LD para Buscadores e Agentes de IA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{TITULO_JSON}},
+    "description": {{CHAMADA_JSON}},
+    "datePublished": "{{DATA_ISO}}",
+    "inLanguage": "es",
+    "author": {
+      "@type": "Organization",
+      "name": "Archivos Ocultos",
+      "url": "https://archivosocultos.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Archivos Ocultos",
+      "url": "https://archivosocultos.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{CANONICAL_URL}}"
+    }
+  }
+  </script>
 
   <!-- Tailwind CSS e Fontes Editoriais -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,7 +64,6 @@
     body { font-family: 'Inter', sans-serif; }
     .font-serif-reading { font-family: 'Merriweather', serif; }
     .font-mono-dossier { font-family: 'JetBrains Mono', monospace; }
-    /* Capitular de revista no primeiro parágrafo */
     .drop-cap::first-letter {
       float: left;
       font-size: 3.25rem;
@@ -64,7 +91,7 @@
   <!-- Dossiê Principal -->
   <main class="w-full max-w-xl bg-stone-900 rounded-2xl shadow-2xl border border-stone-800/90 overflow-hidden mb-6">
     
-    <!-- Faixa de Alerta / Classificação -->
+    <!-- Faixa de Classificação -->
     <div class="bg-stone-950 border-b border-stone-800 px-5 py-3 flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
         <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 text-[11px] font-mono-dossier font-bold px-2.5 py-0.5 rounded uppercase tracking-wider">
@@ -87,20 +114,20 @@
       </p>
     </header>
 
-    <!-- Corpo da História (Com Ícones e Ritmo Visual) -->
+    <!-- Corpo da História -->
     <article class="p-6 sm:p-8 pt-6">
       <div class="font-serif-reading text-stone-300 leading-relaxed text-base sm:text-[17px] space-y-5">
         {{REFLEXAO_HTML}}
       </div>
 
-      <!-- Separador Visual de Dossiê -->
+      <!-- Separador Visual -->
       <div class="flex items-center justify-center my-6 opacity-40">
         <div class="h-px bg-stone-700 flex-grow"></div>
         <span class="px-3 text-xs font-mono-dossier text-amber-500">❖ EVIDENCIA CLAVE ❖</span>
         <div class="h-px bg-stone-700 flex-grow"></div>
       </div>
 
-      <!-- Card "Fator Uau" estilo Nota de Investigação -->
+      <!-- Card Fator Uau -->
       <div class="bg-gradient-to-br from-amber-950/30 to-stone-950 rounded-xl p-5 border border-amber-700/40 relative overflow-hidden">
         <div class="flex items-start gap-3.5">
           <div class="bg-amber-500/20 text-amber-400 p-2 rounded-lg flex-shrink-0 mt-0.5 border border-amber-500/30">
@@ -119,7 +146,7 @@
         </div>
       </div>
 
-      <!-- Card de Compartilhamento estilo Preview de WhatsApp -->
+      <!-- Card de Compartilhamento WhatsApp -->
       <div class="mt-8 bg-[#0b141a] border border-[#202c33] rounded-2xl p-4 shadow-lg">
         <div class="flex items-center justify-between text-xs text-emerald-400 font-semibold mb-2 px-1">
           <span class="flex items-center gap-1.5">
@@ -140,7 +167,7 @@
       </div>
     </article>
 
-    <!-- Vitrine de Afiliados (Amazon EUA / Global) -->
+    <!-- Vitrine de Afiliados Amazon -->
     <section class="px-6 sm:px-8 py-6 border-t border-stone-800 bg-stone-950/70">
       <div class="flex items-center justify-between mb-3">
         <span class="text-[11px] font-mono-dossier font-bold text-stone-400 uppercase tracking-widest flex items-center gap-1.5">
