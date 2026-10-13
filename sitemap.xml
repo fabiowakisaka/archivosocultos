@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://archivosocultos.com/</loc>
     <lastmod>2026-10-13</lastmod>
@@ -7,43 +7,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://archivosocultos.com/artigos/la-guerra-de-38-minutos/</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>[https://archivosocultos.com/artigos/](https://archivosocultos.com/artigos/)la-guerra-de-38-minutos/</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>[https://archivosocultos.com/artigos/](https://archivosocultos.com/artigos/)la-cura-del-cafe-quemado-siglo-xvii/</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>[https://archivosocultos.com/artigos/](https://archivosocultos.com/artigos/)la-masacre-de-los-perros-de-estambul/</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>[https://archivosocultos.com/artigos/](https://archivosocultos.com/artigos/)la-matanza-del-lochness-de-1972/</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>[https://archivosocultos.com/artigos/](https://archivosocultos.com/artigos/)la-gran-plaga-de-langostas-de-siria/</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>[https://archivosocultos.com/artigos/](https://archivosocultos.com/artigos/)la-momia-viva-del-loto-abril-1786/</loc>
+    <loc>https://archivosocultos.com/artigos/el-alquimista-que-ordeno-el-tesoro-del-emperador-ming/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
