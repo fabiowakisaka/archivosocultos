@@ -1,130 +1,13 @@
 [
   {
-    "slug": "la-ley-del-matrimonio-forzoso-encomenderos-1539",
-    "title": "La ley de 1539 que obligó a casarse a los conquistadores",
-    "url": "https://archivosocultos.com/artigos/la-ley-del-matrimonio-forzoso-encomenderos-1539/",
+    "slug": "el-robo-al-tesoro-de-napoleon-en-varsovia",
+    "title": "El misterioso robo del oro de Napoleón en Varsovia",
+    "url": "https://archivosocultos.com/artigos/el-robo-al-tesoro-de-napoleon-en-varsovia/",
     "date_published": "2026-10-15",
-    "historical_era": "Siglo XVI",
-    "region": "América Latina",
-    "summary": "En 1539, una ley implacable de la Corona amenazó con quitarle todo a los conquistadores si no se casaban en 36 meses. Lo que desataron en los muelles de América para conseguir esposa antes de que expirara el plazo...",
-    "key_fact": "Para no perder sus riquezas ni ceder su libertad, varios encomenderos desesperados sobornaron a conventos para casarse formalmente con monjas ancianas moribundas, apostando a que fallecerían a los pocos días de la boda.",
-    "fuente": "Recopilación de Leyes de los Reynos de las Indias, Libro VI, Título IX, Ley I: Real Cédula de Carlos I de 1539."
-  },
-  {
-    "slug": "el-espionaje-de-la-seda-bizancio-china",
-    "title": "El audaz contrabando de gusanos de seda en bastones",
-    "url": "https://archivosocultos.com/artigos/el-espionaje-de-la-seda-bizancio-china/",
-    "date_published": "2026-10-15",
-    "historical_era": "Antigüedad Clásica",
-    "region": "Asia Oriental",
-    "summary": "En el año 552 d.C., dos monjes lograron el espionaje industrial más arriesgado de la historia: sacar gusanos de seda de China ocultos dentro de bastones de bambú huecos... 🐛🥢 ¿Cómo terminó este peligroso contrabando?",
-    "key_fact": "Todo el imperio bizantino se construyó económicamente sobre los descendientes de aquellos pocos gusanos que cupieron en un par de bastones de madera.",
-    "fuente": "Procopio de Cesarea, 'Historia de las guerras' (Libro VIII, De bello Gothico)."
-  },
-  {
-    "slug": "la-fuga-imposible-de-tokugawa-ieyasu-iga",
-    "title": "La fuga imposible de Ieyasu: 100 km entre ninjas y cazadores",
-    "url": "https://archivosocultos.com/artigos/la-fuga-imposible-de-tokugawa-ieyasu-iga/",
-    "date_published": "2026-10-15",
-    "historical_era": "Siglo XVI",
-    "region": "Asia Oriental",
-    "summary": "Junio de 1582: el futuro amo de Japón está de rodillas con un puñal en el vientre para suicidarse.\nRodeado de enemigos y aldeanos que cobran por cabezas decapitadas, su única salida era cruzar la cordillera prohibida de los ninjas.\nLo que su escolta shinobi tuvo que negociar en esas montañas cambió la historia para siempre...",
-    "key_fact": "Como agradecimiento por salvarle la vida en Iga, Ieyasu nombró a Hattori Hanzō comandante de la guardia de su castillo en Edo, bautizando para siempre la enorme puerta occidental como 'Hanzōmon', nombre que hoy conserva una de las estaciones de metro más famosas de Tokio.",
-    "fuente": "Mikawa Monogatari (1622), crónica de Ōkubo Tadataka, y los anales del Shogunato en el Tokugawa Jikki."
-  },
-  {
-    "slug": "la-biblioteca-secreta-de-dunhuang-cuevas-mogao",
-    "title": "El tesoro olvidado de las Cuevas de Mogao",
-    "url": "https://archivosocultos.com/artigos/la-biblioteca-secreta-de-dunhuang-cuevas-mogao/",
-    "date_published": "2026-10-14",
-    "historical_era": "Edad Media",
-    "region": "Asia Oriental",
-    "summary": "En 1900, un monje taoísta barría una cueva en el desierto de Gobi y tiró de un muro falso. Lo que ocultaba desató el mayor expolio arqueológico de Asia.",
-    "key_fact": "Para evitar que el monje sospechara, el arqueólogo Aurel Stein sobornó a Wang Yuanlu utilizando una imitación barata de la diosa Guanyin hecha en yeso británico.",
-    "fuente": "Manuscritos de Dunhuang, conservados en la Biblioteca Británica y la Biblioteca Nacional de Francia (Expedición de Aurel Stein, 1907)."
-  },
-  {
-    "slug": "robo-espadas-toyotomi-hideyoshi-corea",
-    "title": "El audaz robo de la espada del conquistador de Japón",
-    "url": "https://archivosocultos.com/artigos/robo-espadas-toyotomi-hideyoshi-corea/",
-    "date_published": "2026-10-14",
-    "historical_era": "Siglo XVI",
-    "region": "Asia Oriental",
-    "summary": "En 1592, un espía coreano se infiltró en el campamento del hombre más temido de Asia para robarle su espada más preciada. Lo que pasó después desafía la lógica...",
-    "key_fact": "Toyotomi Hideyoshi quedó tan paranoico tras el intento de asesinato que duplicó su guardia personal y jamás volvió a dormir dos noches seguidas en la misma tienda de campaña.",
-    "fuente": "Los Anales de la Dinastía Joseon (Joseon Wangjo Sillok), registro histórico oficial de Corea."
-  },
-  {
-    "slug": "el-impuesto-a-la-luz-victoriana",
-    "title": "El impuesto que mató de oscuridad a la Inglaterra victoriana",
-    "url": "https://archivosocultos.com/artigos/el-impuesto-a-la-luz-victoriana/",
-    "date_published": "2026-10-14",
     "historical_era": "Siglo XIX",
-    "region": "Europa Occidental",
-    "summary": "En el Londres victoriano, el gobierno decidió cobrar por algo que todos creían gratuito: la luz del sol. Miles de personas terminaron viviendo en ataúdes de ladrillo por una ley que...",
-    "key_fact": "Aún hoy, caminar por el centro de Londres permite ver ventanas bloqueadas con ladrillos originales de 1850, monumentos silenciosos a la época en que el sol era ilegal para los pobres.",
-    "fuente": "Report of the Select Committee on the Window Tax (1851), British Parliamentary Papers."
-  },
-  {
-    "slug": "ley-de-piedad-canina-edo-japan",
-    "title": "El dictador que prefería a los perros antes que a los humanos",
-    "url": "https://archivosocultos.com/artigos/ley-de-piedad-canina-edo-japan/",
-    "date_published": "2026-10-14",
-    "historical_era": "Siglo XVII",
-    "region": "Asia Oriental",
-    "summary": "En el siglo XVII, un gobernante japonés decretó que matar a un perro se castigaba con la pena de muerte. Lo que pasó después superó la ficción...",
-    "key_fact": "Para cumplir la ley de censos, los funcionarios imperiales debían registrar formalmente a los cachorros nonatos y mantener historiales médicos de cada perro callejero del imperio.",
-    "fuente": "Tokugawa Jikki (Registros verdaderos de los Tokugawa) y los edictos Shōrui Awaremi no Rei (1687)."
-  },
-  {
-    "slug": "la-caza-de-espadas-del-gran-buda",
-    "title": "La farsa del Buda de hierro que desarmó a Japón",
-    "url": "https://archivosocultos.com/artigos/la-caza-de-espadas-del-gran-buda/",
-    "date_published": "2026-10-13",
-    "historical_era": "Siglo XVI",
-    "region": "Asia Oriental",
-    "summary": "En 1588, el amo supremo de Japón emitió la ley más surrealista de su historia: cada campesino debía entregar sus armas inmediatamente, pero no por seguridad pública... sino para salvar sus almas con un Buda gigante. Lo que nadie sospechaba era el siniestro truco oculto en el decreto.",
-    "key_fact": "La colosal estatua de Buda construida con el acero confiscado colapsó apenas ocho años después, destruida por un terremoto que no perdonó la devoción manipulada de Hideyoshi.",
-    "fuente": "Katanagari-rei (Edicto de Caza de Espadas, 29 de agosto de 1588), preservado en los Archivos Históricos de Maeda y transcrito en el Taikōki."
-  },
-  {
-    "slug": "el-hombre-que-vendio-la-torre-eiffel-en-buenos-aires",
-    "title": "Cuando quisieron mudar la Torre Eiffel a Buenos Aires",
-    "url": "https://archivosocultos.com/artigos/el-hombre-que-vendio-la-torre-eiffel-en-buenos-aires/",
-    "date_published": "2026-10-13",
-    "historical_era": "Principios del Siglo XX",
-    "region": "América Latina",
-    "summary": "En 1924, un estafador europeo llegó a Buenos Aires y convenció al gobierno municipal de comprar nada menos que la Torre Eiffel para desmontarla y usar su hierro...",
-    "key_fact": "Años antes, en 1925, otro estafador llamado Victor Lustig logró vender dos veces la verdadera Torre Eiffel en París, demostrando que el monumento parecía irresistible para los timadores."
-  },
-  {
-    "slug": "el-saludo-al-sol-que-destruyo-un-ejercito-romano",
-    "title": "La sangrienta batalla romana que se decidió por un rezo al Sol",
-    "url": "https://archivosocultos.com/artigos/el-saludo-al-sol-que-destruyo-un-ejercito-romano/",
-    "date_published": "2026-10-13",
-    "historical_era": "Antigüedad Clásica",
-    "region": "Europa Occidental",
-    "summary": "En el 69 d.C., dos ejércitos romanos se mataban a ciegas en mitad de la noche en el norte de Italia. Al amanecer, una legión se giró e hizo un gesto rutinario que desató un pánico catastrófico...",
-    "key_fact": "El historiador Tácito registró que la confusión fue tan extrema que un soldado flaviano mató a un enemigo en la oscuridad y solo descubrió que acababa de asesinar a su propio padre cuando le arrancó la armadura para saquearlo."
-  },
-  {
-    "slug": "el-robo-de-la-seda-de-justiniano",
-    "title": "El mayor contrabando industrial del Imperio bizantino",
-    "url": "https://archivosocultos.com/artigos/el-robo-de-la-seda-de-justiniano/",
-    "date_published": "2026-10-13",
-    "historical_era": "Antigüedad Clásica",
-    "region": "Imperio Otomano / Medio Oriente",
-    "summary": "En el año 552 d.C., dos monjes persas caminaron 4,000 km con gusanos de seda vivos escondidos dentro de sus bastones de bambú huecos...",
-    "key_fact": "Toda la industria de la seda en Europa y el Imperio Bizantino medieval descendió biológicamente de los pocos gusanos que sobrevivieron dentro de esos dos bastones de bambú."
-  },
-  {
-    "slug": "el-alquimista-que-ordeno-el-tesoro-del-emperador-ming",
-    "title": "El alquimista que ordeñó el tesoro del emperador de China",
-    "url": "https://archivosocultos.com/artigos/el-alquimista-que-ordeno-el-tesoro-del-emperador-ming/",
-    "date_published": "2026-10-13",
-    "historical_era": "Siglo XVI",
-    "region": "Asia Oriental",
-    "summary": "En 1540, un charlatán convenció al hombre más poderoso de China de que podía fabricar plata de la nada y volverlo inmortal. El emperador vació las arcas imperiales para financiarlo, sin sospechar que el truco...",
-    "key_fact": "A pesar de casi morir intoxicado por las vajillas 'milagrosas' de Duan, el emperador Jiajing jamás aprendió la lección y siguió consumiendo pócimas de otros embaucadores durante 25 años más hasta colapsar."
+    "region": "Europa del Este",
+    "summary": "En 1812, el ejército de Napoleón huía de Rusia pasando por Varsovia con un cargamento infinito de oro. Una noche, el tesoro entero desapareció bajo las narices de la guardia imperial sin romper una sola cerradura...",
+    "key_fact": "Para ocultar el fraude, los ladrones sobornaron al jefe de la guardia con lingotes que él mismo ayudó a cargar creyendo que era munición secreta.",
+    "fuente": "Archivo Principal de Actos en Varsovia (AGAD), Documentos de la Administración del Ducado de Varsovia, 1812-1813."
   }
 ]
