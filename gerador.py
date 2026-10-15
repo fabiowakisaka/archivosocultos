@@ -10,7 +10,7 @@ from datetime import datetime
 from google import genai
 
 DOMINIO_BASE = "https://" + "archivosocultos.com"
-AMAZON_TAG = os.environ.get("AMAZON_TAG", "archivosocult-20") # Tag internacional US configurável por Secret
+AMAZON_TAG = os.environ.get("AMAZON_TAG", "archivosocu08-20") # Tag internacional US configurável por Secret
 
 def limpar_slug(texto):
     texto = str(texto)
@@ -161,20 +161,19 @@ safe_titulo = html.escape(str(conteudo.get("titulo", "")))
 safe_chamada = html.escape(str(conteudo.get("chamada_zap", "")))
 safe_fuente = html.escape(str(conteudo.get("fuente", "Archivo Histórico Documental")))
 
-# Vitrine de Afiliados com tag internacional dinâmica
+# Vitrine de Afiliados com tag internacional dinâmica e idioma forçado em espanhol (US)
 try:
     with open("produtos.json", "r", encoding="utf-8") as f:
         lista_prod = json.load(f)
         produto_hoje = random.choice(lista_prod)
-        # Garante que o link injete a tag correta
         link_base = produto_hoje.get("link_afiliado", "").split("?")[0]
-        produto_hoje["link_afiliado"] = f"{link_base}?tag={AMAZON_TAG}"
+        produto_hoje["link_afiliado"] = f"{link_base}?tag={AMAZON_TAG}&language=es_US"
 except Exception:
     produto_hoje = {
         "titulo": "Sapiens: De animales a dioses (Edición en Español)",
         "descricao": "La fascinante historia oculta de cómo nuestra especie logró dominar el planeta.",
         "imagem_url": "https://placehold.co/200x260/1c1917/f59e0b.png?text=SAPIENS%0AHARARI&font=playfair-display",
-        "link_afiliado": f"https://www.amazon.com/dp/8499924212?tag={AMAZON_TAG}"
+        "link_afiliado": f"https://www.amazon.com/dp/8499924212?tag={AMAZON_TAG}&language=es_US"
     }
 
 # Gaveta de Outros Expedientes com chaves seguras (.get)
