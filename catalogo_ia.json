@@ -1,5 +1,16 @@
 [
   {
+    "slug": "el-falso-reino-de-poyais",
+    "title": "Gregorio McGregor y el espejismo de Poyais",
+    "url": "https://archivosocultos.com/artigos/el-falso-reino-de-poyais/",
+    "date_published": "2026-11-09",
+    "historical_era": "Principios del Siglo XX",
+    "region": "África",
+    "summary": "Un aventurero convenció a inversores británicos de comprar tierras en un reino africano que no existía. Vendió títulos nobiliarios y bonos por una fortuna antes de que alguien notara el mapa en blanco.",
+    "key_fact": "McGregor se libró de la cárcel durante años gracias a su talento para seducir a las cortes europeas, convirtiéndose en el estafador más prolífico del siglo sin haber pisado jamás un calabozo por el fraude de Poyais.",
+    "fuente": "The Life and Adventures of Gregor McGregor (1820), British National Archives, Colonial Office Records."
+  },
+  {
     "slug": "los-falsificadores-de-cacao-en-el-mexico-prehispanico",
     "title": "Los maestros del cacao falso: la estafa prehispánica",
     "url": "https://archivosocultos.com/artigos/los-falsificadores-de-cacao-en-el-mexico-prehispanico/",
@@ -669,17 +680,6 @@
     "summary": "¿Imaginas que una operación a abdomen abierto en plena selva africana en 1506 salvara a madre e hijo usando solo vino y un cuchillo?",
     "key_fact": "Durante el siglo XVI en Europa, la tasa de mortalidad materna en una cesárea realizada por médicos titulados era prácticamente del 100%.",
     "fuente": "Crónica de la expedición y escritos del viajero francés François de Pigafetta sobre el Reino de Congo."
-  },
-  {
-    "slug": "el-falso-reino-de-poyais",
-    "title": "La estafa maestra de Gregor MacGregor: El reino inexistente",
-    "url": "https://archivosocultos.com/artigos/el-falso-reino-de-poyais/",
-    "date_published": "2026-11-06",
-    "historical_era": "Siglo XVIII",
-    "region": "América Latina",
-    "summary": "Un escocés convenció a toda la élite londinense de invertir en un país tropical inexistente. Vendió tierras, títulos nobiliarios y hasta dinero falso... hasta que los colonos llegaron al mar.",
-    "key_fact": "Gregor MacGregor es el único hombre en la historia que se casó con una pariente de la realeza venezolana y sobrevivió al colapso de su propio imperio imaginario.",
-    "fuente": "Diario de bordo de la expedición a Poyais, Archivos Nacionales de Londres (HO 73/2)."
   },
   {
     "slug": "la-noche-de-los-pajaros-asesinos-en-colombia",
